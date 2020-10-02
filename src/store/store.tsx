@@ -1,4 +1,5 @@
 import { createStore } from "redux";
+import { Action } from "./actions";
 
 export interface NotesState {
   notes: string[];
@@ -6,11 +7,6 @@ export interface NotesState {
 
 const initialState = {
   notes: ["This is your first note..."],
-};
-
-type Action = {
-  type: "ADD_NOTE";
-  payload: string;
 };
 
 const notesReducer = (state: NotesState = initialState, action: Action) => {
